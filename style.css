@@ -1,0 +1,631 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scrollbutton {
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    background-color: red;
+    border: 2px solid red;
+    height: 60px;
+    width: 60px;
+    display: none;
+    place-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.scrollbutton:hover {
+    background: transparent;
+    color: black;
+}
+
+
+
+.firstpage {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container {
+    height: 120px;
+    width: 550px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 10px;
+
+}
+
+.input input {
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 25px;
+    background: none;
+    padding-left: 10px;
+    width: 410px;
+}
+
+.search {
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 50%;
+
+    border: 1.5px solid black;
+}
+
+.fa-magnifying-glass {
+    color: white;
+    height: 50px;
+    width: 50px;
+    margin: 13px;
+
+}
+
+.fa-magnifying-glass:hover {
+    color: black;
+}
+
+.search:hover {
+    background-color: white;
+}
+
+.input {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    height: 70px;
+    width: 88%;
+    margin: 20px;
+
+}
+
+.secondpage {
+    width: 1280px;
+    height: 0px;
+}
+
+.details {
+    bottom: -200px;
+    position: absolute;
+    width: 100%;
+    transition: bottom 0.3s ease;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    height: 130px;
+}
+
+li {
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+li img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.profile {
+    margin: 20px;
+}
+
+.profilepic {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profilepic img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+ul li:hover .details {
+    bottom: 0;
+}
+
+.subdetail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.download {
+    margin-top: 40px;
+    margin-right: 20px;
+    height: 60px;
+    color: black;
+    width: 60px;
+    background-color: #fff;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+
+.download:hover {
+    background: transparent;
+}
+
+.download:hover i {
+    color: white;
+}
+
+ul {
+    margin-left: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 32%;
+}
+
+.aboutpic {
+    margin-top: 40px;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.secondpage button {
+    height: 40px;
+    width: 200px;
+    background-color: rgb(126, 126, 240);
+    border: 2px solid rgb(126, 126, 240);
+    transition: all 0.5s ease;
+    font-size: 20px;
+    color: black;
+    border-radius: 10px;
+    display: none;
+    cursor: pointer;
+
+}
+
+.secondpage {
+    width: 1280px;
+    position: relative;
+}
+
+.secondpage button:hover {
+    background: transparent;
+}
+
+.mybutton {
+    margin-left: 500px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    display:block;
+
+}
+
+.moreoptions {
+    position: fixed;
+    background-color: white;
+    width: 70%;
+    margin-left: 200px;
+    border-radius: 10px;
+    top: 50px;
+    display: block;
+
+}
+.newmore{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+}
+
+.imgbar {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px -1px 16px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px -1px 16px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px -1px 16px 3px rgba(0, 0, 0, 0.5);
+}
+.imgbar p{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    margin: 15px;
+    color: white;
+}
+
+.loading {
+    background: transparent url('http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif') center no-repeat;
+  }
+
+
+.bgimage{
+height: 1206px;
+    width: 1400px;
+    position: absolute;
+    display: none;
+ 
+
+
+}
+.bgimage p{
+    position: absolute;
+    color: white;
+    margin: 30px;
+    transform: translate(1200px,10px);
+    cursor: pointer;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 7px;
+    display: grid;
+    place-content: center;
+    border: 2px solid black;
+    position: fixed;
+}
+.bgimage p:hover{
+    color: black;
+    background-color: white;
+}
+
+
+.bgimage img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+.imgbar p{
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 7px;
+    display: grid;
+    place-content: center;
+    border: 1.7px dashed black;
+}
+.imgbar p:hover{
+    background-color: white;
+    color: black;
+    scale: 1.1;
+}
+.imgbar img {
+    height: 500px;
+    width: 500px;
+    transition: all 0.5s ease-in ;
+}
+
+
+.navbar {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.close {
+    display: flex;
+}
+
+.navbar p {
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: purple;
+    border: 2px solid purple;
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+}
+
+.navbar p:hover {
+    color: black;
+    background: transparent;
+}
+
+.camera {
+    display: flex;
+    gap: 17px;
+}
+
+.camera span {
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+.inform {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    height: 100px;
+    width: 570px;
+    display: grid;
+    place-content: center;
+}
+
+.informtext {
+    height: 100%;
+    width: 100%;
+
+}
+
+.bgi {
+    height: 98vh;
+    width: 100%;
+    z-index: -2;
+}
+
+.bgi img {
+    height: 98vh;
+    width: 100%;
+    z-index: -4;
+    background-size: cover;
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+.sidesection {
+    position: absolute;
+}
+
+@media only screen and (max-width:1024px) {
+    ul {
+        grid-template-columns: auto auto;
+        gap: 0px;
+        display: grid;
+        margin: 0px;
+    }
+    li {
+        height: 500px;
+        width: 470px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+
+    }
+    
+    li img {
+        height: 500px;
+        width: 470px;
+        object-fit: cover;
+    }
+    .secondpage{
+        width: 1024px;
+    }
+    .firstpage {
+        width: 1024px;
+        height: 98vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .scrollbutton{
+        left: 90%;
+    }
+    .mybutton{
+        margin-left: 400px;
+    }
+    .imgbar{
+        margin-top: 50px;
+        margin-left: 60px;
+        height: 700px;
+        width: 600px;
+        margin-bottom: 50px;
+    }
+    .imgbar img{
+        height: 700px;
+        width: 600px;
+    }
+    .moreoptions{
+        top: 300px;
+        background: white;
+    }
+
+}
+@media only screen and (max-height:610px){
+    .imgbar{
+        margin-top: 50px;
+        margin-left: 60px;
+        height: 550px;
+        width: 600px;
+        margin-bottom: 50px;
+    }
+    .imgbar img{
+        height: 550px;
+        width: 600px;
+    }
+    .moreoptions{
+        top: 10px;
+        background: white;
+    }
+}
+@media only screen and (max-width:480px){
+    ul {
+        gap: 0px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px;
+        width: 100%;
+    }
+    .bgi img{
+        width: 480px;
+    }
+    li {
+        height: 500px;
+        width: 350px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-left: 50px;
+
+    }
+    
+    li img {
+        height: 500px;
+        width: 350px;
+        object-fit: cover;
+        
+    }
+    .secondpage{
+        width: 480px;
+    }
+    .firstpage {
+        width: 480px;
+        height: 98vh;
+        display: flex;
+        
+    }
+    .scrollbutton{
+        
+        left: 70%;
+    }
+    .mybutton{
+        margin-left: 100px;
+    }
+    .imgbar{
+        margin-top: 10px;
+        margin-left: 20px;
+        height: 400px;
+        width: 350px;
+        margin-bottom: 5px;
+    }
+    .imgbar img{
+        height: 400px;
+        width: 350px;
+        margin-bottom: 5px;
+    }
+    .moreoptions{
+        position: fixed;
+    background-color: white;
+    width: 400px;
+    margin-left: 10px;
+    border-radius: 10px;
+    top: 300px;
+    display: none;
+    }
+    .navbar {
+        display: flex;
+        margin: 10px;
+    }
+    .close {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+    .bgi img{
+        width: 450px;
+    }
+    .input input {
+        outline: none;
+        border: none;
+        color: black;
+        font-size: 25px;
+        background: none;
+        width: 250px;
+    }
+    
+    .search {
+        margin-top: 3px;
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        cursor: pointer;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        border: 1.5px solid black;
+    }
+    .input {
+        display: flex;
+        background-color: white;
+        border-radius: 20px;
+        height: 50px;
+        width: 300px;
+    
+    }
+    .container {
+        height: 100px;
+        width: 350px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        margin: 10px;
+    
+    }
+    .fa-magnifying-glass {
+        color: white;
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+    
+    }
+    .inform {
+        margin-bottom: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+        height: 200px;
+        width: 300px;
+        display: grid;
+        place-content: center;
+    }
+    
+    .informtext {
+        height: 100%;
+        width: 100%;
+        font: 20px;
+        margin-left: 20px;
+    
+    }
+    
+
+}
