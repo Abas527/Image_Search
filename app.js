@@ -161,7 +161,6 @@ function zoomin(){
 
 var randomvalue=parseInt(Math.random()*10);
 console.log(randomvalue)
-document.querySelector(".bgi img").src=imagearray[randomvalue].src;
 document.querySelector(".informtext").innerHTML=`<h1 style="color: ${imagearray[randomvalue].color};" >The best free stock photos, royalty free </h1>
 <h1 style="color: ${imagearray[randomvalue].color};">images & videos shared by creators.</h1>`
 
